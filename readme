@@ -1,3 +1,60 @@
 so falta a pasta nodules , criem ae um bgl em react, boostrap e tb json server que eh oq falta viu
 
 so isso e tb lembrem de fazer o electro n sei oq q transforma de web pra desktop
+
+
+Primeiro projeto
+● Abra o terminal para criar o projeto, e digite:
+– sudo npm i -g create-react-app
+● O create-react-app é um programa que auxilia na criação de aplicações React, 
+configurando o projeto de forma descomplicada. Outra alternativa é utilizar o 
+npx.
+● Agora devemos criar nosso projeto:
+– create-react-app aula01
+● Agora entre na pasta e inicie o projeto:
+– cd aula01
+– npm start
+
+
+Instalando:
+– sudo npm install -g json-server
+● Crie uma pasta chamada “data”, no mesmo 
+nível de src, onde serão salvos os arquivos 
+relativos as entidades do projeto CRUD.
+
+
+
+Json-Server
+
+● O arquivo db.json
+{
+ "estudantes":[
+ {"id":1,"nome":"Jefferson","curso":"SI","IRA":9.0},
+ {"id":2,"nome":"Thomas","curso":"SI","IRA":7.5}
+ ]
+}
+
+
+
+Json-Server
+● Iniciando nossa API:
+– json-server --watch data/db.json --port 3001
+● Agora acesse http://localhost:3001/estudantes
+● Dica:
+– Instale um cliente REST no seu navegador (extensão)
+– Sugestões: Postman ou ARC
+
+
+
+Json-Server
+
+React → Json-Server
+● O problema agora é fazer com que nossa aplicação se comunique 
+com o Json-Server (e futuramente com o Mongo, via Express).
+● Para ajudar nessa tarefa, iremos instalar o Axios.
+– npm install axios --save
+● O Axios facilita a chamada dos métodos HTTP (PUT, DELETE, 
+POST, GET…)
+● No caso da criação de um novo estudante, usaremos o método 
+HTTP POST
+
